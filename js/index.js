@@ -12,6 +12,7 @@
     var addressInfo = $(".address")
 
     addressInfo.hide()
+    $(".errorMessage").hide()
 
     detectionBtn.on("click", function (evt) {
       detectLocation()
@@ -91,10 +92,19 @@
         navigator.geolocation.getCurrentPosition(function (location) {
           $("#loadingBar").hide()
           displayLocation(location)
-        })
+        }, errorNavigation)
       }
     }
 
+    function errorNavigation(error) {
+      showErrorMessage(error)
+      Materialize.toast("<i class='material-icons'>close</i> We were unable to find your location", 2000)
+    }
+
+    function showErrorMessage(error) {
+      $("#loadingBar").hide()
+      $(".errorMessage").show()
+    }
 
     // gets the reverse for a location using Google GeoCoding API
     // API KEY REQUIRED

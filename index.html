@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>What is the situation?</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
   </head>
   <body>
@@ -13,6 +14,14 @@
       </div>
       <div class="row">
         <button type="button" class="btn waves-blue waves-effect waves-light" id="detection-button">DETECT MY LOCATION</button>
+      </div>
+      <div class="row errorMessage">
+        <div class="card red black-text">
+          <div class="card-content">
+            <span class="card-title">Error occured!</span><br/>
+            Sorry we were unable to access your location!
+          </div>
+        </div>
       </div>
       <div class="row latlong animated flipInX" style="display: none;" id="locationDisplay">
         <div class="col s6 ">
