@@ -98,6 +98,7 @@
 
     function errorNavigation(error) {
       showErrorMessage(error)
+      Materialize.toast("<i class='material-icons'>close</i> We were unable to find your location", 2000)
     }
 
     function showErrorMessage(error) {
