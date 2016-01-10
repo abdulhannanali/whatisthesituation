@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>What is the situation?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h2>What's the situation?</h2>
+      </div>
+      <div class="row">
+        <button type="button" class="btn waves-blue waves-effect waves-light" id="detection-button">DETECT MY LOCATION</button>
+      </div>
+      <div class="row latlong animated flipInX" style="display: none;" id="locationDisplay">
+        <div class="col s6 ">
+          <div class="card-panel animated fadeInX green">
+            <span class="white-text"><h5>Latitude <span id="latitude"></span></h5></span>
+          </div>
+        </div>
+        <div class="col s6 ">
+          <div class="card-panel animated fadeInY light-green">
+            <span class="white-text"><h5>Longitude <span id="longitude"></span></h5></span>
+          </div>
+        </div>
+      </div>
+      <div class="row animated zoomIn geoDetails" >
+        <div class="col s6">
+          <div class="card-panel cyan lighten-4 weather">
+            <div class="weatherHead">
+              <h5>The weather in your area</h5>
+              <div class="row">
+                <div class="col s6">
+                  <div class="right">
+                    <h5 id="weatherNumber"></h5>
+                  </div>
+                </div>
+                <div class="col s6" id="weatherImage">
+                </div>
+              </div>
+            </div>
+            <div class="row"><div class="center"><h5 id="weatherDesc"></h5></div></div>
+            <div class="row">
+              <div class="col s6">
+                <h6>Maximum Temperature</h6>
+              </div>
+              <div class="col s6">
+                <h6><b id="tempMax"></b></h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <h6>Minimum Temperature</h6>
+              </div>  
+              <div class="col s6">
+                <h6 id="tempMin"></h6>
+              </div>          
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <h6>Humidity</h6>
+              </div>
+              <div class="col s6">
+                <h6><b id="humidity"></b></h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <h6>Sunrise</h6>
+              </div>
+              <div class="col s6">
+                <h6><b id="sunrise"></b></h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <h6>Sunset</h6>
+              </div>
+              <div class="col s6">
+                <h6><b id="sunset"></b></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map col s6">
+          <div class="card-panel">
+            <h5>Map of your location</h5>
+            <div class="row"><div class="col s12"><div class="mapImage center"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="address col s12 animated fadeIn">
+          <div class="card-panel light-green accent-2">
+            <h5>Addresses we can find for your location</h5>
+            <p>These addresses are ordered from most specific to least specific</p>
+            <table id="addressTable">
+              <thead>
+                <th>Address</th>
+              </thead>
+              <tbody id="addressBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="loadingBar">
+        <div class="progress green"><div class="indeterminate blue"></div></div>
+      </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
