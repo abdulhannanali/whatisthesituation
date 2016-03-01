@@ -38,3 +38,7 @@ If you would like to extend in terms of what this project can do, feel free to d
 
 #### FOSSASIA 
 This task is done as part of Google CodeIn with [FOSSASIA](https://fossasia.org). FOSSASIA is an open source organization which is playing a major role in promoting open source contributions and development in the Asian region and all over the world. Please check out the website of fossasia at [fossasia.org](http://fossasia.org) and FOSSASIA's github pages at [fossasia.github.io](https://fossasia.github.io)
+
+#### LICENSE
+
+MIT LICNSE. SEE [LICENSE](LICENSE) for more details.
